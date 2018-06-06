@@ -1,5 +1,19 @@
 "use strict"
 
+document.addEventListener('DOMContentLoaded', function() {
+  updateMatrix(window.location.hash);
+}, false);
+
+window.onhashchange = function() {
+  updateMatrix(window.location.hash);
+};
+
+function updateMatrix(hash) {
+  if (hash) {
+    printMatrix(eval(hash.substring(1)));
+  }
+}
+
 const handRanks = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 
 function printMatrix(hands) {

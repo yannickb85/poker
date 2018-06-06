@@ -22,7 +22,7 @@ function printMatrix(hands) {
       card += (indexCol < indexRow ? "s" : "");
 
       let myDiv = document.createElement("div");
-      myDiv.setAttribute("id", "hand-" + card);
+      myDiv.setAttribute("id", `hand-${card}`);
 
       myDiv.setAttribute("class", "matrixCol fold");
 
@@ -81,9 +81,9 @@ function colorizeRange(range, action) {
   // Groups (22-77, A2s-A5s)
   if (range.includes("-")) {
     // Pairs (22-77)
-    if (range.charAt(0) == range.charAt(1) && range.charAt(3) == range.charAt(4)) {
-      let lowPairRankIndex = handRanks.indexOf(range.charAt(0));
-      let highPairRankIndex = handRanks.indexOf(range.charAt(3));
+    if (range[0] == range[1] && range[3] == range[4]) {
+      let lowPairRankIndex = handRanks.indexOf(range[0]);
+      let highPairRankIndex = handRanks.indexOf(range[3]);
 
       for (let i = lowPairRankIndex; i >= highPairRankIndex; i--) {
         addColor("" + handRanks[i]+handRanks[i], action);
@@ -92,12 +92,12 @@ function colorizeRange(range, action) {
 
       // Unpaired (A2s-A5s)
       let suited = false;
-      if (range.charAt(2) == "s") {
+      if (range[2] == "s") {
         suited = true;
       }
-      let lowRankIndex = handRanks.indexOf(range.charAt(1));
-      let highRankIndex = handRanks.indexOf(range.charAt((suited) ? 5 : 4));
-      let highCard = range.charAt(0);
+      let lowRankIndex = handRanks.indexOf(range[1]);
+      let highRankIndex = handRanks.indexOf(range[(suited) ? 5 : 4]);
+      let highCard = range[0];
       let highCardIndex = handRanks.indexOf(highCard);
       for (let i = lowRankIndex; i >= highRankIndex; i--) {
         addColor("" + highCard+handRanks[i] + ((suited) ? "s" : ""), action);
@@ -106,20 +106,20 @@ function colorizeRange(range, action) {
   } else {
 
     // Greater than (J9s+, AT+, etc.)
-    if (range.slice(-1) == "+") {
+    if (range[range.length - 1] == "+") {
       // Pairs
-      if (range.charAt(0) == range.charAt(1)) {
-        let rankIndex = handRanks.indexOf(range.charAt(0));
+      if (range[0] == range[1]) {
+        let rankIndex = handRanks.indexOf(range[0]);
         for (let i = rankIndex; i >= 0; i--) {
           addColor("" + handRanks[i]+handRanks[i], action);
         }
       } else {
         let suited = false;
-        if (range.charAt(2) == "s") {
+        if (range[2] == "s") {
           suited = true;
         }
-        let rankIndex = handRanks.indexOf(range.charAt(1));
-        let highCard = range.charAt(0);
+        let rankIndex = handRanks.indexOf(range[1]);
+        let highCard = range[0];
         let highCardIndex = handRanks.indexOf(highCard);
         for (let i = rankIndex; i > highCardIndex; i--) {
           addColor("" + highCard+handRanks[i] + ((suited) ? "s" : ""), action);
@@ -132,6 +132,6 @@ function colorizeRange(range, action) {
 }
 
 function addColor(hand, action) {
-  document.getElementById("hand-" + hand).classList.remove("fold");
-  document.getElementById("hand-" + hand).classList.add(action);
+  document.getElementById(`hand-${hand}`).classList.remove("fold");
+  document.getElementById(`hand-${hand}`).classList.add(action);
 }

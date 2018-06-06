@@ -29,7 +29,7 @@ function printMatrix(hands) {
   while (indexCol < handRanks.length) {
     while (indexRow < handRanks.length) {
 
-      // Sorting with highest card first
+      // Sorting with highest card first (i.e. AK instead of KA or 97s instead of 79s)
       card = (indexCol <= indexRow ? handRanks[indexCol] + handRanks[indexRow] : handRanks[indexRow] + handRanks[indexCol]);
 
       // Suited

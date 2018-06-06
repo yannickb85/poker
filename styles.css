@@ -60,7 +60,8 @@ a:visited {
   top: -25px;
   left: -20px;
 
-  width: 100px;
+  min-width: 100px;
+  max-width: 150px;
 
   z-index: 1;
 }
@@ -69,16 +70,18 @@ a:visited {
 }
 .submenu li {
   list-style: none;
-  border-bottom: 1px solid #FFF;
-  padding: 10px 30px 10px 20px;
-  margin: 0 10px;
-
-  width: 100%;
-
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  padding: 10px;
   position: relative;
+  text-align: center;
+}
+.submenu > li.slider {
+  text-align: right;
 }
 .submenu li:last-of-type {
-  border-bottom: none;
+  border-bottom: 1px solid #FFF;
 }
 .submenu li > span {
   cursor: pointer;
@@ -92,26 +95,25 @@ a:visited {
   color: #FFFFFF;
   background: #1A8FE3;
   border-radius: 5px;
+  text-align: left;
 
   white-space: nowrap;
 
-  width: 100px;
+  min-width: 100px;
 
-  padding-top: 10px;
+  /*border: 1px solid #FFF;*/
 
-  border: 1px solid #FFF;
-
-  top: -10px;
-  left: 90px;
+  top: 0px;
+  right: -100px;
 
   z-index: 4;
 }
+
 .slidemenu li > span {
   cursor: pointer;
 }
 .slidemenu {
   display: none;
-  text-align: left;
 }
 
 

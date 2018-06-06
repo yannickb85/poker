@@ -3,8 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="ranges.js"></script>
     <title>Hand ranges visualizer</title>
+    <script src="ranges.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        updateMatrix(window.location.hash);
+      }, false);
+
+      window.onhashchange = function() {
+        updateMatrix(window.location.hash);
+      };
+
+      function updateMatrix(hash) {
+        if (hash) {
+          printMatrix(eval(hash.substring(1)));
+        }
+      }
+    </script>
   </head>
   <body>
     <nav class="range-nav">
@@ -12,11 +27,11 @@
         <li class="dropdown">
           <span>RFI &#9662;</span>
           <ul class="submenu">
-            <li><a href="#" onclick="printMatrix(ranges.RFI.SB)">SB</a></li>
-            <li><a href="#" onclick="printMatrix(ranges.RFI.LJ)">LJ</a></li>
-            <li><a href="#" onclick="printMatrix(ranges.RFI.HJ)">HJ</a></li>
-            <li><a href="#" onclick="printMatrix(ranges.RFI.CO)">CO</a></li>
-            <li><a href="#" onclick="printMatrix(ranges.RFI.BTN)">BTN</a></li>
+            <li><a href="#ranges.RFI.SB">SB</a></li>
+            <li><a href="#ranges.RFI.LJ">LJ</a></li>
+            <li><a href="#ranges.RFI.HJ">HJ</a></li>
+            <li><a href="#ranges.RFI.CO">CO</a></li>
+            <li><a href="#ranges.RFI.BTN">BTN</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -25,41 +40,41 @@
             <li class="slider">
               <span>SB &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.SB.vsBB)">vs. BB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.SB.vsBB">vs. BB</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>LJ &#9656;­</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.LJ.vsSB)">vs.SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.LJ.vsBB)">vs.BB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.LJ.vsHJ)">vs. HJ</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.LJ.vsCO)">vs.CO</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.LJ.vsBTN)">vs.BTN</a></li>
+                <li><a href="#ranges.RFIvs3Bet.LJ.vsSB">vs.SB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.LJ.vsBB">vs.BB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.LJ.vsHJ">vs. HJ</a></li>
+                <li><a href="#ranges.RFIvs3Bet.LJ.vsCO">vs.CO</a></li>
+                <li><a href="#ranges.RFIvs3Bet.LJ.vsBTN">vs.BTN</a></li>
               </ul>
             ­</li>
             <li class="slider">
               <span>HJ &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.HJ.vsSB)">vs.SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.HJ.vsBB)">vs.BB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.HJ.vsCO)">vs.CO</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.HJ.vsBTN)">vs.BTN</a></li>
+                <li><a href="#ranges.RFIvs3Bet.HJ.vsSB">vs.SB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.HJ.vsBB">vs.BB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.HJ.vsCO">vs.CO</a></li>
+                <li><a href="#ranges.RFIvs3Bet.HJ.vsBTN">vs.BTN</a></li>
               </ul>
             ­</li>
             <li class="slider">
               <span>CO &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.CO.vsSB)">vs.SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.CO.vsBB)">vs.BB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.CO.vsBTN)">vs.BTN</a></li>
+                <li><a href="#ranges.RFIvs3Bet.CO.vsSB">vs.SB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.CO.vsBB">vs.BB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.CO.vsBTN">vs.BTN</a></li>
               </ul>
             ­</li>
             <li class="slider">
               <span>BTN &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.BTN.vsSB)">vs.SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.RFIvs3Bet.BTN.vsBB)">vs.BB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.BTN.vsSB">vs.SB</a></li>
+                <li><a href="#ranges.RFIvs3Bet.BTN.vsBB">vs.BB</a></li>
               </ul>
             ­</li>
           </ul>­
@@ -70,41 +85,41 @@
             <li class="slider">
               <span>vs. SB &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsSB.BB)">BB</a></li>
+                <li><a href="#ranges.vsRFI.vsSB.BB">BB</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>vs. LJ &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsLJ.SB)">SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsLJ.BB)">BB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsLJ.HJ)">HJ</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsLJ.CO)">CO</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsLJ.BTN)">BTN</a></li>
+                <li><a href="#ranges.vsRFI.vsLJ.SB">SB</a></li>
+                <li><a href="#ranges.vsRFI.vsLJ.BB">BB</a></li>
+                <li><a href="#ranges.vsRFI.vsLJ.HJ">HJ</a></li>
+                <li><a href="#ranges.vsRFI.vsLJ.CO">CO</a></li>
+                <li><a href="#ranges.vsRFI.vsLJ.BTN">BTN</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>vs. HJ &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsHJ.SB)">SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsHJ.BB)">BB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsHJ.CO)">CO</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsHJ.BTN)">BTN</a></li>
+                <li><a href="#ranges.vsRFI.vsHJ.SB">SB</a></li>
+                <li><a href="#ranges.vsRFI.vsHJ.BB">BB</a></li>
+                <li><a href="#ranges.vsRFI.vsHJ.CO">CO</a></li>
+                <li><a href="#ranges.vsRFI.vsHJ.BTN">BTN</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>vs. CO &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsCO.SB)">SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsCO.BB)">BB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsCO.BTN)">BTN</a></li>
+                <li><a href="#ranges.vsRFI.vsCO.SB">SB</a></li>
+                <li><a href="#ranges.vsRFI.vsCO.BB">BB</a></li>
+                <li><a href="#ranges.vsRFI.vsCO.BTN">BTN</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>vs. BTN &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsBTN.SB)">SB</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.vsRFI.vsBTN.BB)">BB</a></li>
+                <li><a href="#ranges.vsRFI.vsBTN.SB">SB</a></li>
+                <li><a href="#ranges.vsRFI.vsBTN.BB">BB</a></li>
               </ul>
             </li>
           </ul>­
@@ -115,38 +130,38 @@
             <li class="slider">
               <span>CO vs. &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.CO.vsHJ)">HJ 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.CO.vsHJ">HJ 3-Bet</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>BTN vs. &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BTN.vsHJ)">HJ 3-Bet</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BTN.vsCO)">CO 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BTN.vsHJ">HJ 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BTN.vsCO">CO 3-Bet</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>SB vs. &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.SB.vsHJ)">HJ 3-Bet</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.SB.vsCO)">CO 3-Bet</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.SB.vsBTN)">BTN 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.SB.vsHJ">HJ 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.SB.vsCO">CO 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.SB.vsBTN">BTN 3-Bet</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>BB vs. &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BB.vsHJ)">HJ 3-Bet</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BB.vsCO)">CO 3-Bet</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BB.vsBTN)">BTN 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BB.vsHJ">HJ 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BB.vsCO">CO 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BB.vsBTN">BTN 3-Bet</a></li>
               </ul>
             </li>
             <li class="slider">
               <span>BB vs. SB 3-Bet and &#9656;</span>
               <ul class="slidemenu">
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BBvsSB.vsLJHJ)">LJ/HJ open</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BBvsSB.vsCO)">CO 3-Bet</a></li>
-                <li><a href="#" onclick="printMatrix(ranges.cold4bet.BBvsSB.vsBTN)">BTN 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BBvsSB.vsLJHJ">LJ/HJ open</a></li>
+                <li><a href="#ranges.cold4bet.BBvsSB.vsCO">CO 3-Bet</a></li>
+                <li><a href="#ranges.cold4bet.BBvsSB.vsBTN">BTN 3-Bet</a></li>
               </ul>
             </li>
           </ul>

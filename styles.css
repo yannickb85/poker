@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 14px;
+  font-size: 18px;
   font-family: sans-serif;
   color: #2B2B2B;
 }
@@ -73,12 +73,17 @@ a:visited {
   border-left: 1px solid #FFF;
   border-right: 1px solid #FFF;
   border-top: 1px solid #FFF;
-  padding: 10px;
   position: relative;
-  text-align: center;
+  height: 55px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .submenu > li.slider {
-  text-align: right;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 .submenu li:last-of-type {
   border-bottom: 1px solid #FFF;
@@ -119,19 +124,19 @@ a:visited {
 
 .range-visualizer {
   margin: 60px 10px;
-  width: 800px;
+  width: 1024px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 .legend {
   margin: 20px;
-  /*display: flex;*/
-  display: none;
+  display: none; /*display: flex;*/
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-size: 14px;
 }
 .legend div {
   min-width: 100px;
@@ -139,12 +144,12 @@ a:visited {
   margin-bottom: 5px;
 }
 #range-title {
-  width: 500px;
+  width: 590px;
   height: 50px;
   text-align: center;
 }
 #matrix {
-  width: 500px;
+  width: 590px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;

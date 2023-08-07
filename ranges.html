@@ -7,6 +7,7 @@
     <script src="ranges.js"></script>
   </head>
   <body>
+
     <nav class="range-nav">
       <ul class="menu">
         <li class="dropdown">
@@ -110,62 +111,61 @@
           </ul>­
         </li>
         <li class="dropdown">
-          <span>Cold 4-Bet &#9662;</span>
+          <span>vs 4-Bet &#9662;</span>
           <ul class="submenu">
             <li class="slider">
-              <span>CO vs. &#9656;</span>
+              <span>BB &#9656;</span>
               <ul class="slidemenu">
-                <a href="#ranges.cold4bet.CO.vsHJ"><li>HJ 3-Bet</li></a>
+                <a href="#ranges.vs4Bet.BB.vsSB"><li>vs. SB</li></a>
+                <a href="#ranges.vs4Bet.BB.vsLJ"><li>vs. LJ</li></a>
+                <a href="#ranges.vs4Bet.BB.vsHJ"><li>vs. HJ</li></a>
+                <a href="#ranges.vs4Bet.BB.vsCO"><li>vs. CO</li></a>
+                <a href="#ranges.vs4Bet.BB.vsBTN"><li>vs. BTN</li></a>
               </ul>
             </li>
             <li class="slider">
-              <span>BTN vs. &#9656;</span>
+              <span>SB &#9656;</span>
               <ul class="slidemenu">
-                <a href="#ranges.cold4bet.BTN.vsHJ"><li>HJ 3-Bet</li></a>
-                <a href="#ranges.cold4bet.BTN.vsCO"><li>CO 3-Bet</li></a>
+                <a href="#ranges.vs4Bet.SB.vsLJ"><li>vs. LJ</li></a>
+                <a href="#ranges.vs4Bet.SB.vsHJ"><li>vs. HJ</li></a>
+                <a href="#ranges.vs4Bet.SB.vsCO"><li>vs. CO</li></a>
+                <a href="#ranges.vs4Bet.SB.vsBTN"><li>vs. BTN</li></a>
               </ul>
             </li>
             <li class="slider">
-              <span>SB vs. &#9656;</span>
+              <span>BTN &#9656;</span>
               <ul class="slidemenu">
-                <a href="#ranges.cold4bet.SB.vsHJ"><li>HJ 3-Bet</li></a>
-                <a href="#ranges.cold4bet.SB.vsCO"><li>CO 3-Bet</li></a>
-                <a href="#ranges.cold4bet.SB.vsBTN"><li>BTN 3-Bet</li></a>
+                <a href="#ranges.vs4Bet.BTN.vsLJ"><li>vs. LJ</li></a>
+                <a href="#ranges.vs4Bet.BTN.vsHJ"><li>vs. HJ</li></a>
+                <a href="#ranges.vs4Bet.BTN.vsCO"><li>vs. CO</li></a>
               </ul>
             </li>
             <li class="slider">
-              <span>BB vs. &#9656;</span>
+              <span>CO &#9656;</span>
               <ul class="slidemenu">
-                <a href="#ranges.cold4bet.BB.vsHJ"><li>HJ 3-Bet</li></a>
-                <a href="#ranges.cold4bet.BB.vsCO"><li>CO 3-Bet</li></a>
-                <a href="#ranges.cold4bet.BB.vsBTN"><li>BTN 3-Bet</li></a>
-              </ul>
-            </li>
-            <li class="slider">
-              <span>BB vs. SB 3-Bet and &#9656;</span>
-              <ul class="slidemenu">
-                <a href="#ranges.cold4bet.BBvsSB.vsLJHJ"><li>LJ/HJ open</li></a>
-                <a href="#ranges.cold4bet.BBvsSB.vsCO"><li>CO 3-Bet</li></a>
-                <a href="#ranges.cold4bet.BBvsSB.vsBTN"><li>BTN 3-Bet</li></a>
+                <a href="#ranges.vs4Bet.CO.vsLJ"><li>vs. LJ</li></a>
+                <a href="#ranges.vs4Bet.CO.vsHJ"><li>vs. HJ</li></a>
               </ul>
             </li>
           </ul>
         </li>
       </ul>
     </nav>
+
     <section class="range-visualizer">
       <h1 id="range-title"></h1>
       <div id="matrix"></div>
       <div id="legend" class="legend">
         <div class="matrixCol raise">Raise</div>
-        <div class="matrixCol raise-or-call">Raise or Call</div>
-        <div class="matrixCol raise-or-fold">Raise or Fold</div>
-        <div class="matrixCol raise-call-or-fold">Raise, Call or Fold</div>
         <div class="matrixCol call">Call</div>
-        <div class="matrixCol call-or-fold">Call or Fold</div>
         <div class="matrixCol fold">Fold</div>
       </div>
     </section>
+
+   
+      <iframe src="https://www.randomizer.poker" width="590px" style="border: 0"></iframe>
+  
+
     <script src="poker.js"></script>
   </body>
 </html>

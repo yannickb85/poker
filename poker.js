@@ -73,9 +73,49 @@ function colorize(hands) {
       colorizeRange(range, "raise-or-call");
     }
   }
+  if (hands.hasOwnProperty("raise-call-jam")) {
+    for (const range of hands["raise-call-jam"]) {
+      colorizeRange(range, "raise-call-jam");
+    }
+  }
+  if (hands.hasOwnProperty("raise25-or-call")) {
+    for (const range of hands["raise25-or-call"]) {
+      colorizeRange(range, "raise25-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("raise75-or-call")) {
+    for (const range of hands["raise75-or-call"]) {
+      colorizeRange(range, "raise75-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("raise-jam")) {
+    for (const range of hands["raise-jam"]) {
+      colorizeRange(range, "raise-jam");
+    }
+  }
+  if (hands.hasOwnProperty("raise25-or-fold")) {
+    for (const range of hands["raise25-or-fold"]) {
+      colorizeRange(range, "raise25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise75-or-fold")) {
+    for (const range of hands["raise75-or-fold"]) {
+      colorizeRange(range, "raise75-or-fold");
+    }
+  }
   if (hands.hasOwnProperty("raise-or-fold")) {
     for (const range of hands["raise-or-fold"]) {
       colorizeRange(range, "raise-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("call25-or-fold")) {
+    for (const range of hands["call25-or-fold"]) {
+      colorizeRange(range, "call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("call75-or-fold")) {
+    for (const range of hands["call75-or-fold"]) {
+      colorizeRange(range, "call75-or-fold");
     }
   }
   if (hands.hasOwnProperty("call-or-fold")) {
@@ -86,6 +126,21 @@ function colorize(hands) {
   if (hands.hasOwnProperty("raise-call-or-fold")) {
     for (const range of hands["raise-call-or-fold"]) {
       colorizeRange(range, "raise-call-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise25-call25-or-fold")) {
+    for (const range of hands["raise25-call25-or-fold"]) {
+      colorizeRange(range, "raise25-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise25-call50-or-fold")) {
+    for (const range of hands["raise25-call50-or-fold"]) {
+      colorizeRange(range, "raise25-call50-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise50-call25-or-fold")) {
+    for (const range of hands["raise50-call25-or-fold"]) {
+      colorizeRange(range, "raise50-call25-or-fold");
     }
   }
 }

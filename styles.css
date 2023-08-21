@@ -120,7 +120,19 @@ a:visited {
   display: none;
 }
 
-
+#randomNumberDiv {
+  width: 590px;
+  height: 150px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 96px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px; /* Adding rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Adding smooth transition */
+}
 
 
 .range-visualizer {

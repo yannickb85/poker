@@ -68,6 +68,11 @@ function colorize(hands) {
       colorizeRange(range, "call");
     }
   }
+  if (hands.hasOwnProperty("jam")) {
+    for (const range of hands.jam) {
+      colorizeRange(range, "jam");
+    }
+  }
   if (hands.hasOwnProperty("raise-or-call")) {
     for (const range of hands["raise-or-call"]) {
       colorizeRange(range, "raise-or-call");
@@ -76,6 +81,11 @@ function colorize(hands) {
   if (hands.hasOwnProperty("raise-call-jam")) {
     for (const range of hands["raise-call-jam"]) {
       colorizeRange(range, "raise-call-jam");
+    }
+  }
+  if (hands.hasOwnProperty("raise10-or-call")) {
+    for (const range of hands["raise10-or-call"]) {
+      colorizeRange(range, "raise10-or-call");
     }
   }
   if (hands.hasOwnProperty("raise25-or-call")) {
@@ -88,9 +98,19 @@ function colorize(hands) {
       colorizeRange(range, "raise75-or-call");
     }
   }
-  if (hands.hasOwnProperty("raise-jam")) {
-    for (const range of hands["raise-jam"]) {
-      colorizeRange(range, "raise-jam");
+  if (hands.hasOwnProperty("raise90-or-call")) {
+    for (const range of hands["raise90-or-call"]) {
+      colorizeRange(range, "raise90-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("raise-or-jam")) {
+    for (const range of hands["raise-or-jam"]) {
+      colorizeRange(range, "raise-or-jam");
+    }
+  }
+  if (hands.hasOwnProperty("raise10-or-fold")) {
+    for (const range of hands["raise10-or-fold"]) {
+      colorizeRange(range, "raise10-or-fold");
     }
   }
   if (hands.hasOwnProperty("raise25-or-fold")) {
@@ -108,6 +128,11 @@ function colorize(hands) {
       colorizeRange(range, "raise-or-fold");
     }
   }
+  if (hands.hasOwnProperty("call10-or-fold")) {
+    for (const range of hands["call10-or-fold"]) {
+      colorizeRange(range, "call10-or-fold");
+    }
+  }
   if (hands.hasOwnProperty("call25-or-fold")) {
     for (const range of hands["call25-or-fold"]) {
       colorizeRange(range, "call25-or-fold");
@@ -116,6 +141,11 @@ function colorize(hands) {
   if (hands.hasOwnProperty("call75-or-fold")) {
     for (const range of hands["call75-or-fold"]) {
       colorizeRange(range, "call75-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("call90-or-fold")) {
+    for (const range of hands["call90-or-fold"]) {
+      colorizeRange(range, "call90-or-fold");
     }
   }
   if (hands.hasOwnProperty("call-or-fold")) {
@@ -128,9 +158,34 @@ function colorize(hands) {
       colorizeRange(range, "raise-call-or-fold");
     }
   }
+  if (hands.hasOwnProperty("raise10-call10-or-fold")) {
+    for (const range of hands["raise10-call10-or-fold"]) {
+      colorizeRange(range, "raise10-call10-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise10-call25-or-fold")) {
+    for (const range of hands["raise10-call25-or-fold"]) {
+      colorizeRange(range, "raise10-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise10-call50-or-fold")) {
+    for (const range of hands["raise10-call50-or-fold"]) {
+      colorizeRange(range, "raise10-call50-or-fold");
+    }
+  }
   if (hands.hasOwnProperty("raise25-call25-or-fold")) {
     for (const range of hands["raise25-call25-or-fold"]) {
       colorizeRange(range, "raise25-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise25-call10-or-fold")) {
+    for (const range of hands["raise25-call10-or-fold"]) {
+      colorizeRange(range, "raise25-call10-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise50-call10-or-fold")) {
+    for (const range of hands["raise50-call10-or-fold"]) {
+      colorizeRange(range, "raise50-call10-or-fold");
     }
   }
   if (hands.hasOwnProperty("raise25-call50-or-fold")) {
@@ -141,6 +196,76 @@ function colorize(hands) {
   if (hands.hasOwnProperty("raise50-call25-or-fold")) {
     for (const range of hands["raise50-call25-or-fold"]) {
       colorizeRange(range, "raise50-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("raise75-call10-or-fold")) {
+    for (const range of hands["raise75-call10-or-fold"]) {
+      colorizeRange(range, "raise75-call10-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam-or-call")) {
+    for (const range of hands["jam-or-call"]) {
+      colorizeRange(range, "jam-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("jam-or-fold")) {
+    for (const range of hands["jam-or-fold"]) {
+      colorizeRange(range, "jam-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam-call-or-fold")) {
+    for (const range of hands["jam-call-or-fold"]) {
+      colorizeRange(range, "jam-call-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam10-or-call")) {
+    for (const range of hands["jam10-or-call"]) {
+      colorizeRange(range, "jam10-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("jam25-or-call")) {
+    for (const range of hands["jam25-or-call"]) {
+      colorizeRange(range, "jam25-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("jam75-or-call")) {
+    for (const range of hands["jam75-or-call"]) {
+      colorizeRange(range, "jam75-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("jam90-or-call")) {
+    for (const range of hands["jam90-or-call"]) {
+      colorizeRange(range, "jam90-or-call");
+    }
+  }
+  if (hands.hasOwnProperty("jam10-call10-or-fold")) {
+    for (const range of hands["jam10-call10-or-fold"]) {
+      colorizeRange(range, "jam10-call10-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam10-call25-or-fold")) {
+    for (const range of hands["jam10-call25-or-fold"]) {
+      colorizeRange(range, "jam10-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam25-call25-or-fold")) {
+    for (const range of hands["jam25-call25-or-fold"]) {
+      colorizeRange(range, "jam25-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam50-call10-or-fold")) {
+    for (const range of hands["jam50-call10-or-fold"]) {
+      colorizeRange(range, "jam50-call10-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam50-call25-or-fold")) {
+    for (const range of hands["jam50-call25-or-fold"]) {
+      colorizeRange(range, "jam50-call25-or-fold");
+    }
+  }
+  if (hands.hasOwnProperty("jam10-or-fold")) {
+    for (const range of hands["jam10-or-fold"]) {
+      colorizeRange(range, "jam10-or-fold");
     }
   }
 }

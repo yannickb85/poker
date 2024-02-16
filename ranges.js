@@ -377,8 +377,8 @@ let ranges = {
     "vsHJ": {
       "SB": {
         "title": "vs RFI: Small Blind vs High Jack",
-        "raise": ["JJ+", "AQ+", "AJs+", "A3s-A4s", "KJs+"],
-        "raise-or-fold": ["88", "ATs", "A5s", "A2s", "KTs"],
+        "raise": ["JJ+", "AQ+", "AJs+", "A3s-A4s", "KJs+", "KQ"],
+        "raise-or-fold": ["ATs", "A5s", "A2s", "KTs"],
         "raise25-or-fold": ["TT", "A6s-A7s", "K4s", "K6s-K7s", "AJ", "KJ"],
         "raise10-or-fold": ["55-99", "K8s"]
       },

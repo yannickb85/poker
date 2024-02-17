@@ -281,7 +281,7 @@ let ranges = {
         "raise25-call10-or-fold": ["A4s"],
         "call": ["ATs-AJs", "KJs+", "99"],
         "call-or-fold": ["JTs", "T9s", "66", "54s"],
-        "call25-or-fold": ["98s", "76s", "65s", "22-44"]
+        "call25-or-fold": ["98s", "76s", "65s", "22-55"]
       },
       "vsBB": {
         "title": "RFI Button vs 3-Bet from Big Blind",

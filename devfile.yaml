@@ -1,0 +1,37 @@
+schemaVersion: 2.2.0
+attributes:
+  controller.devfile.io/storage-type: per-workspace
+metadata:
+  name: poker-app
+projects:
+- name: poker-app
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/yannickb85/poker.git
+components:
+  name: dev-tooling
+  container:
+    image: quay.io/devfile/universal-developer-image:ubi8-latest
+    endpoints:
+      - name: http-3000
+        targetPort: 3000
+commands:
+  - id: install
+    exec:
+      commandLine: npm install
+      component: dev-tooling
+      workingDir: ${PROJECT_SOURCE}
+      group:
+        isDefault: true
+        kind: build
+  - id: run
+    exec:
+      commandLine: node app.js
+      component: dev-tooling
+      workingDir: ${PROJECT_SOURCE}
+      group:
+        isDefault: true
+        kind: run

@@ -12,10 +12,10 @@ projects:
     remotes:
       origin: https://github.com/yannickb85/poker.git
 components:
-  name: dev-tooling
-  container:
-    image: quay.io/devfile/universal-developer-image:ubi8-latest
-    endpoints:
+-  name: dev-tooling
+   container:
+     image: quay.io/devfile/universal-developer-image:ubi8-latest
+     endpoints:
       - name: http-3000
         targetPort: 3000
 commands:
